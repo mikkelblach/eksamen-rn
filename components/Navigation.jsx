@@ -13,6 +13,7 @@ import EditProfileScreen from "./../screens/EditProfileScreen";
 import CreateProfileScreen from '../screens/CreateProfile';
 import { NavigationContainer } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 
@@ -28,10 +29,41 @@ const NavigationComponent = ({ navigation }) => {
             {token !== undefined ? (
                 // Show the app with all navigation
                 <Tab.Navigator headerMode="screen">
-                    <Tab.Screen name="Home" component={HomeScreen} options={{ headerTitle: "Feed"}} />
-                    <Tab.Screen name="Discover" component={DiscoverScreen} />
-                    <Tab.Screen name="Chat" component={ChatStack} />
-                    <Tab.Screen name="Menu" component={MenuStack} />
+                    <Tab.Screen name="Home" component={HomeScreen} options={{
+                        headerTitle: "Feed", tabBarIcon: ({ focused }) => (
+                            <Ionicons
+                                name='home-sharp'
+                                style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25 }}
+                            ></Ionicons>
+                        )
+                    }} />
+                    <Tab.Screen name="Discover" component={DiscoverScreen} options={{
+                         tabBarIcon: 
+                         ({ focused }) => (
+                         <Ionicons
+                             name='menu-outline'
+                             style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
+                         ></Ionicons>
+                         )
+                    }} />
+                    <Tab.Screen name="Chat" component={ChatStack} options={{
+                         tabBarIcon: 
+                         ({ focused }) => (
+                         <Ionicons
+                             name='menu-outline'
+                             style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
+                         ></Ionicons>
+                         )
+                    }}/>
+                    <Tab.Screen name="Menu" component={MenuStack} options={{
+                         tabBarIcon: 
+                         ({ focused }) => (
+                         <Ionicons
+                             name='menu-outline'
+                             style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
+                         ></Ionicons>
+                         )
+                    }} />
                 </Tab.Navigator>
             ) : (
                 // show a stack navigator with only signup and login screens.
@@ -49,7 +81,7 @@ const NavigationComponent = ({ navigation }) => {
 function MenuStack() {
     return (
         <Stack.Navigator  >
-            <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}></Stack.Screen>
+            <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}></Stack.Screen>
             <Stack.Screen name="EditProfile" component={EditProfileScreen}></Stack.Screen>
         </Stack.Navigator>
     )
@@ -58,7 +90,7 @@ function MenuStack() {
 function ChatStack() {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Screen1" options={{headerShown: false}} component={Screen1} />
+            <Stack.Screen name="Screen1" options={{ headerShown: false }} component={Screen1} />
             <Stack.Screen name="Screen2" component={Screen2} />
             <Stack.Screen name="AndreScreen" component={Screen3} />
         </Stack.Navigator>
