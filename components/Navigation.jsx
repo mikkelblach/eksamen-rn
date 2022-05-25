@@ -41,7 +41,7 @@ const NavigationComponent = ({ navigation }) => {
                          tabBarIcon: 
                          ({ focused }) => (
                          <Ionicons
-                             name='menu-outline'
+                             name='search-sharp'
                              style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
                          ></Ionicons>
                          )
@@ -50,7 +50,7 @@ const NavigationComponent = ({ navigation }) => {
                          tabBarIcon: 
                          ({ focused }) => (
                          <Ionicons
-                             name='menu-outline'
+                             name='chatbubbles-sharp'
                              style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
                          ></Ionicons>
                          )
@@ -59,7 +59,7 @@ const NavigationComponent = ({ navigation }) => {
                          tabBarIcon: 
                          ({ focused }) => (
                          <Ionicons
-                             name='menu-outline'
+                             name='menu-sharp'
                              style={{ color: focused ? '#5050a5' : '#b7b7b7', fontSize: 25}}
                          ></Ionicons>
                          )

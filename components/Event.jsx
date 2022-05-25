@@ -1,6 +1,8 @@
 import { View, Text, ImageBackground, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { React } from 'react';
 import styles from '../styles/styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 const Event = props => {
 
@@ -24,7 +26,7 @@ const Event = props => {
                         </View>
 
                         <View style={styles.flexContainer}>
-                            <Text style={styles.cardIcon}>*</Text>
+                            <Text style={styles.cardIcon}></Text>
                             <Text style={[styles.cardText]}>Lapoint Surf</Text>
                         </View>
                     </View>
