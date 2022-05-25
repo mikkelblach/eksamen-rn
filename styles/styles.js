@@ -54,7 +54,7 @@ color: highlightColor,
   },
   cardMargin:{
     marginTop: 12,
-    marginBottom: 12,
+    marginBottom: 12
   },
   cardOverlay:{
     backgroundColor: "rgba(0,0,0,0.3)",
@@ -100,6 +100,8 @@ color: highlightColor,
   },
   cardIcon: {
     color: "#ffffff",
-  },
+    fontSize: 14,
+    paddingRight: 2,
+  },r
 });
 
