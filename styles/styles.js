@@ -101,7 +101,7 @@ color: highlightColor,
   cardIcon: {
     color: "#ffffff",
     fontSize: 14,
-    paddingRight: 2,
-  },r
+    marginRight: 6,
+  },
 });
 
